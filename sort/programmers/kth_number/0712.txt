@@ -1,0 +1,11 @@
+def solution(array, commands):
+    answer = []
+    for i in range(len(commands)):
+        one = commands[i][0]
+        two = commands[i][1]
+        three = commands[i][2]
+        
+        tArray = array[one-1:two]
+        tArray.sort()
+        answer.append(tArray[three-1])
+    return answer

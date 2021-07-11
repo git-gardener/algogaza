@@ -1,8 +1,5 @@
 def solution(numbers):
     
-    num_str = []
-    num_str2 = []
-    num_str3 = []
     answer = ''    
     
     numbers = list(map(str,numbers))

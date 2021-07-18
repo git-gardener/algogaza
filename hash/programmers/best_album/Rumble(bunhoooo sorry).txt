@@ -6,7 +6,7 @@ class Solution {
         
         HashMap<String,Integer>hash=new HashMap<>();
 
-		for(String num:phone_book){
+	for(String num:phone_book){
             hash.put(num,1);
         }
         for(String num:phone_book){

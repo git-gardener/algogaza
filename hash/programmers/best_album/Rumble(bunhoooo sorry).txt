@@ -1,0 +1,22 @@
+import java.util.*;
+
+class Solution {
+    public boolean solution(String[] phone_book) {
+        boolean answer = true;
+        
+        HashMap<String,Integer>hash=new HashMap<>();
+
+		for(String num:phone_book){
+            hash.put(num,1);
+        }
+        for(String num:phone_book){
+            for(int i =0; i < num.length(); i++){
+                if(hash.containsKey(num.substring(0,i))){
+                    return false;
+                }
+            }
+        }
+
+			return answer;
+    }
+}

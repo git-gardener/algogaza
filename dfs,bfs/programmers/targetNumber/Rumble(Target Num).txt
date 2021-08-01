@@ -12,8 +12,8 @@ public class Solution {
             //System.out.println("index"+index);
 			return;
 		}
-		dfs(numbers,index+1, sum+numbers[index],target);
-		dfs(numbers,index+1, sum -numbers[index],target);
+		dfs(numbers,index+1, sum +numbers[index],target);
+		dfs(numbers,index +1, sum -numbers[index],target);
 		
 	}
 }

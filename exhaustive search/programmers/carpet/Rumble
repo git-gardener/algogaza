@@ -1,0 +1,20 @@
+class Solution {
+    public int[] solution(int brown, int yellow) {
+        int[] answer = new int[2];
+                
+        int count = brown + yellow; 
+
+        for(int i=1; i<=count; i++){
+            if(count % i==0){
+                //System.out.println(i);
+                if(i==count / i || i>count / i){
+                    answer[0] = i;
+                    answer[1] = count / i;
+                    break;
+                }
+            } 
+        }
+        return answer; 
+
+    }
+}

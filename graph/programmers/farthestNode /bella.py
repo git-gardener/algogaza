@@ -2,10 +2,9 @@ from collections import deque
 
 def solution(n, edge):
     graph = {}
-    queue = deque([])
-    cntArr = [0 for i in range(n + 1)]
-    answer = 100
     cnt = 1
+    answer = 0
+    cntArr = [-1 for i in range(n+1)]
 
     for e in edge:
         if not graph.__contains__(e[0]):
@@ -18,24 +17,23 @@ def solution(n, edge):
         graph[e[1]].sort()
 
     visited = [False for i in range(n + 1)]
-    visited[1] = True
-    queue.append(1)
 
+    queue = deque([[1, cnt]])
     while queue:
-        currNode = queue.popleft()
-        cnt += 1
-        for g in graph[currNode]:
-            if not visited[g]:
-                queue.append(g)
-                visited[g] = True
+        arr = queue.popleft()
+        currNode = arr[0]
+        cnt = arr[1]
+        if visited[currNode] == False:
+            visited[currNode] = True
+            cntArr[currNode] = cnt
+            cnt += 1
+            for g in graph[currNode]:
+                queue.append([g, cnt])
 
-        if queue.__len__() == 0:
-            print(cnt)
-        print(queue)
+    for c in cntArr:
+        if c == max(cntArr):
+            answer += 1
 
-    print(cntArr)
-
-    answer = cnt
     return answer
 
 

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def solution(n, results):
     answer = 0
     graph = [[0 for i in range(n+1)] for j in range(n+1)]

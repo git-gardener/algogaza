@@ -34,7 +34,6 @@ def solution(genres, plays):
 
     return answer
 
-
 solution(["classic", "pop", "classic", "pop", "classic", "classic"],[400, 600, 150, 600, 500, 500])
 
 

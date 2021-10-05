@@ -7,7 +7,7 @@ def bfs(info,fieldGraph,sheep,wolf,visited,root):
     cnt = 0
 
     while queue:
-        print(queue, sheep, wolf, visitedQueue)
+        # print(queue, sheep, wolf, visitedQueue)
         currNode = queue.popleft()
         if visited[root] == True:
             visitedQueue.append(currNode)

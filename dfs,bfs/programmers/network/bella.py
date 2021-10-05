@@ -1,7 +1,6 @@
 def dfs(computers, i, check):
   check[i] = True
   for j in range(len(computers)):
-
     if (i != j and computers[i][j] == 1 and check[j] == False):
       print(computers[i][j])
       check = dfs(computers, j, check)

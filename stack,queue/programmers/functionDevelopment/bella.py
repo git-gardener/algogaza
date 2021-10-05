@@ -1,6 +1,5 @@
 import math
 
-
 def solution(progresses, speeds):
     answer = []
     days = [0] * len(progresses)
@@ -19,3 +18,4 @@ def solution(progresses, speeds):
 
     answer.append(cnt)
     return answer
+
